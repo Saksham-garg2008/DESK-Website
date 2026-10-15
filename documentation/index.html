@@ -1,14 +1,134 @@
+
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#000000"><meta name="description" content="Documentation and developer resources for DESK."><title>Documentation — DESK</title><link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../assets/css/style.css"><script src="../assets/js/main.js" defer></script></head>
-<body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container nav-wrap"><a class="brand" href="../" aria-label="DESK home"><span class="brand-mark">D</span><span>DESK</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav"><span class="sr-only">Toggle navigation</span><span></span><span></span></button><nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="../">Home</a><a href="../features/">Features</a><a href="../downloads/">Downloads</a><a aria-current="page" href="./">Documentation</a><a href="../contributing/">Contributing</a><a class="nav-source" href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">Source <span>↗</span></a></nav></div></header>
-<main id="main"><section class="page-hero container"><p class="eyebrow">DESK / DOCUMENTATION</p><h1>Understand the project.<br><span class="muted">Follow the code.</span></h1><p class="hero-copy">The repository is the source of truth for setup instructions, implementation details, configuration, and release-specific changes.</p></section>
-<section class="section section-bordered"><div class="container resource-grid">
-<a class="resource-card" href="https://github.com/Saksham-garg2008/DESK#readme" target="_blank" rel="noreferrer"><span class="resource-number">01</span><span class="resource-arrow">↗</span><p class="eyebrow">START HERE</p><h2>README</h2><p>Project overview, installation guidance, key links, and basic orientation.</p><span class="text-link">Open README <span>↗</span></span></a>
-<a class="resource-card" href="https://github.com/Saksham-garg2008/DESK/wiki" target="_blank" rel="noreferrer"><span class="resource-number">02</span><span class="resource-arrow">↗</span><p class="eyebrow">GUIDES</p><h2>GitHub Wiki</h2><p>Browse project guides and supporting documentation, where available.</p><span class="text-link">Open Wiki <span>↗</span></span></a>
-<a class="resource-card" id="architecture" href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer"><span class="resource-number">03</span><span class="resource-arrow">↗</span><p class="eyebrow">IMPLEMENTATION</p><h2>Architecture</h2><p>Explore the code to understand the UI, inference, action protocol, and supporting managers.</p><span class="text-link">Browse source <span>↗</span></span></a>
-<a class="resource-card" href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE" target="_blank" rel="noreferrer"><span class="resource-number">04</span><span class="resource-arrow">↗</span><p class="eyebrow">LICENSING</p><h2>GPL-2.0-only</h2><p>Read the license file in the official repository before redistributing covered code.</p><span class="text-link">Read license <span>↗</span></span></a>
-<a class="resource-card" href="https://github.com/Saksham-garg2008/DESK-Companion" target="_blank" rel="noreferrer"><span class="resource-number">05</span><span class="resource-arrow">↗</span><p class="eyebrow">ANDROID</p><h2>DESK-Companion</h2><p>Visit the dedicated Android Companion repository and its own setup instructions.</p><span class="text-link">Open Companion <span>↗</span></span></a>
-<a class="resource-card" href="https://github.com/Saksham-garg2008/DESK/releases" target="_blank" rel="noreferrer"><span class="resource-number">06</span><span class="resource-arrow">↗</span><p class="eyebrow">VERSIONS</p><h2>Releases</h2><p>Review release assets, changes, and version-specific notes from the maintainers.</p><span class="text-link">View releases <span>↗</span></span></a>
-</div></section></main>
-<footer class="site-footer"><div class="container footer-main"><a class="brand" href="../"><span class="brand-mark">D</span><span>DESK</span></a><p>Open-source desktop AI, built in the open.</p><div class="footer-links"><a href="../features/">Features</a><a href="../contributing/">Contributing</a><a href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE" target="_blank" rel="noreferrer">GPL-2.0-only License</a></div></div><div class="container footer-bottom"><span>© <span data-year>2026</span> DESK contributors</span><a href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">View source ↗</a></div></footer></body></html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Documentation, architecture references, and developer resources for DESK.">
+  <title>Documentation — DESK</title>
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../" aria-label="DESK home">
+        <span class="brand-mark">D</span><span>DESK</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../">Home</a>
+        <a href="../features/">Features</a>
+        <a href="../downloads/">Downloads</a>
+        <a aria-current="page" href="./">Documentation</a>
+        <a href="../contributing/">Contributing</a>
+        <a class="nav-source" href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero container">
+      <p class="eyebrow">DESK / DOCUMENTATION</p>
+      <h1>Understand the project.<br><span class="muted">Follow the code.</span></h1>
+      <p class="hero-copy">The repository is the source of truth for setup instructions, implementation details, configuration, and release-specific changes.</p>
+    </section>
+
+    <section class="section section-bordered">
+      <div class="container resource-grid">
+
+        <a class="resource-card" href="https://github.com/Saksham-garg2008/DESK#readme" target="_blank" rel="noreferrer">
+          <span class="resource-number">01</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">START HERE</p>
+          <h2>README</h2>
+          <p>Project overview, installation guidance, key links, and basic orientation.</p>
+          <span class="text-link">Open README <span>↗</span></span>
+        </a>
+
+        <a class="resource-card" href="https://github.com/Saksham-garg2008/DESK/wiki" target="_blank" rel="noreferrer">
+          <span class="resource-number">02</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">GUIDES</p>
+          <h2>GitHub Wiki</h2>
+          <p>Browse project guides and supporting documentation, where available.</p>
+          <span class="text-link">Open Wiki <span>↗</span></span>
+        </a>
+
+        <a class="resource-card" id="architecture" href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">
+          <span class="resource-number">03</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">IMPLEMENTATION</p>
+          <h2>Architecture</h2>
+          <p>Explore the code to understand the UI, inference, action protocol, and supporting managers.</p>
+          <span class="text-link">Browse source <span>↗</span></span>
+        </a>
+
+        <a class="resource-card" id="filesystem" href="https://github.com/Saksham-garg2008/DESK/blob/main/core/filesystem.py" target="_blank" rel="noreferrer">
+          <span class="resource-number">04</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">FILESYSTEM</p>
+          <h2>Filesystem tools</h2>
+          <p>Inspect filesystem discovery, filename search, and the supported actions for creating files and folders.</p>
+          <span class="text-link">Explore implementation <span>↗</span></span>
+        </a>
+
+        <a class="resource-card" href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE" target="_blank" rel="noreferrer">
+          <span class="resource-number">05</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">LICENSING</p>
+          <h2>GPL-2.0-only</h2>
+          <p>Read the license file in the official repository before redistributing covered code.</p>
+          <span class="text-link">Read license <span>↗</span></span>
+        </a>
+
+        <a class="resource-card" href="https://github.com/Saksham-garg2008/DESK-Companion" target="_blank" rel="noreferrer">
+          <span class="resource-number">06</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">ANDROID</p>
+          <h2>DESK-Companion</h2>
+          <p>Visit the dedicated Android Companion repository and its own setup instructions.</p>
+          <span class="text-link">Open Companion <span>↗</span></span>
+        </a>
+
+        <a class="resource-card" href="https://github.com/Saksham-garg2008/DESK/releases" target="_blank" rel="noreferrer">
+          <span class="resource-number">07</span>
+          <span class="resource-arrow">↗</span>
+          <p class="eyebrow">VERSIONS</p>
+          <h2>Releases</h2>
+          <p>Review release assets, changes, and version-specific notes from the maintainers.</p>
+          <span class="text-link">View releases <span>↗</span></span>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand" href="../"><span class="brand-mark">D</span><span>DESK</span></a>
+      <p>Open-source desktop AI, built in the open.</p>
+      <div class="footer-links">
+        <a href="../features/">Features</a>
+        <a href="../contributing/">Contributing</a>
+        <a href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE" target="_blank" rel="noreferrer">GPL-2.0-only License</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> DESK contributors</span>
+      <a href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">View source ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
+
