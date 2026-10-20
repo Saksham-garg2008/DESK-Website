@@ -5,24 +5,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Explore DESK's current desktop assistant capabilities, filesystem actions, and architecture.">
-  <title>Features — DESK</title>
+  <meta name="description" content="Explore DESK Alpha Edition v2.2.0: structured AI actions, desktop integration, filesystem operations, and the Android Companion.">
+
+  <title>Features — DESK Alpha Edition</title>
+
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="../assets/js/main.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="../" aria-label="DESK home">
-        <span class="brand-mark">D</span><span>DESK</span>
+        <span class="brand-mark">D</span>
+        <span>DESK</span>
       </a>
 
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
         <span class="sr-only">Toggle navigation</span>
-        <span></span><span></span>
+        <span></span>
+        <span></span>
       </button>
 
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
@@ -31,16 +36,43 @@
         <a href="../downloads/">Downloads</a>
         <a href="../documentation/">Documentation</a>
         <a href="../contributing/">Contributing</a>
-        <a class="nav-source" href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">Source <span aria-hidden="true">↗</span></a>
+        <a href="../iconic-releases/">Iconic Releases</a>
+        <a class="nav-source" href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">
+          Source <span aria-hidden="true">↗</span>
+        </a>
       </nav>
     </div>
   </header>
 
   <main id="main">
+
     <section class="page-hero container">
-      <p class="eyebrow">DESK / CAPABILITIES</p>
-      <h1>Designed around<br><span class="muted">useful actions.</span></h1>
-      <p class="hero-copy">DESK connects an AI interface with a modular application layer. The capabilities below describe the current implementation, not a promise of unrestricted computer control.</p>
+      <p class="eyebrow">DESK / CAPABILITIES / ALPHA EDITION</p>
+
+      <h1>
+        Designed around<br>
+        <span class="muted">useful actions.</span>
+      </h1>
+
+      <p class="hero-copy">
+        DESK brings an AI interface and a desktop application layer together.
+        Explore the capabilities available in the current implementation,
+        from supported desktop actions to filesystem operations.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary"
+           href="../downloads/">
+          Get Alpha Edition <span>↗</span>
+        </a>
+
+        <a class="button button-secondary"
+           href="https://github.com/Saksham-garg2008/DESK"
+           target="_blank"
+           rel="noreferrer">
+          Explore the source
+        </a>
+      </div>
     </section>
 
     <section class="section section-bordered">
@@ -48,63 +80,207 @@
 
         <article class="detail-row" id="actions">
           <span class="detail-number">01</span>
+
           <div>
             <p class="eyebrow">ACTION LAYER</p>
-            <h2>Structured requests</h2>
-            <p>Supported actions are represented in a structured format so application code can interpret and validate them. This is intended to be more dependable than blindly turning arbitrary text into shell commands or URLs.</p>
+            <h2>From requests to actions</h2>
+
+            <p>
+              DESK can interpret supported requests and pass structured
+              actions to application code for execution. This creates a
+              defined path between what the user asks and what the
+              application is permitted to do.
+            </p>
+
+            <p>
+              Actions are limited to implemented capabilities. DESK is not
+              intended to turn every instruction into an arbitrary shell
+              command or grant an AI unrestricted control over the computer.
+            </p>
+
+            <p>
+              <a class="inline-link"
+                 href="https://github.com/Saksham-garg2008/DESK/blob/main/core/agent_actions.py"
+                 target="_blank"
+                 rel="noreferrer">Explore agent actions ↗</a>
+            </p>
           </div>
+
           <span class="detail-symbol">↗</span>
         </article>
 
         <article class="detail-row" id="desktop">
           <span class="detail-number">02</span>
+
           <div>
             <p class="eyebrow">DESKTOP INTEGRATION</p>
-            <h2>Applications and browser destinations</h2>
-            <p>DESK includes logic for opening supported desktop applications and web destinations. Actual behavior depends on the operating system, installed applications, and the current implementation.</p>
+            <h2>Work with your desktop</h2>
+
+            <p>
+              DESK supports opening desktop applications and web destinations
+              through implemented actions. This includes supported browser
+              destinations and services, depending on your system and
+              installed applications.
+            </p>
+
+            <p>
+              Browser profile selection can be configured through DESK
+              settings, keeping that choice under the user's control rather
+              than leaving it to the AI to decide.
+            </p>
+
+            <p>
+              Actual behaviour depends on the operating system, application
+              availability, configuration, and the action being requested.
+            </p>
           </div>
+
           <span class="detail-symbol">⌘</span>
         </article>
 
         <article class="detail-row" id="filesystem">
           <span class="detail-number">03</span>
+
           <div>
             <p class="eyebrow">FILESYSTEM</p>
             <h2>Find files. Create project structures.</h2>
-            <p>DESK can search for files and directories by name within the locations it is configured to search. Matching is case-insensitive and supports exact or partial name queries. A search may be reported as incomplete if some locations cannot be accessed.</p>
-
-            <p>Supported actions can create folders, including missing parent directories, and create new text files with supplied content. File creation does not overwrite an existing file at the target path.</p>
-
-            <p>Filesystem search is read-only: it searches names and does not read file contents or modify files. Creation is limited to the supported actions implemented in DESK; this is not unrestricted filesystem access.</p>
 
             <p>
-              <a class="inline-link" href="https://github.com/Saksham-garg2008/DESK/blob/main/core/filesystem.py" target="_blank" rel="noreferrer">Filesystem discovery ↗</a>
+              DESK can discover supported filesystem locations and search
+              for files and directories by name. Searches can use exact or
+              partial names, helping you locate items without manually
+              browsing every folder.
+            </p>
+
+            <p>
+              Filesystem discovery is designed to work with user-accessible
+              locations, including relevant mounted storage where supported.
+              Search results may be incomplete if a location cannot be
+              accessed.
+            </p>
+
+            <p>
+              Supported actions can create directories, including missing
+              parent directories, and create new text files with supplied
+              content. File creation does not overwrite an existing file
+              at the target path.
+            </p>
+
+            <p>
+              Search and creation are distinct operations. Filename search
+              does not read file contents or modify the files it finds;
+              creation is limited to supported actions rather than
+              unrestricted filesystem access.
+            </p>
+
+            <p>
+              <a class="inline-link"
+                 href="https://github.com/Saksham-garg2008/DESK/blob/main/core/filesystem.py"
+                 target="_blank"
+                 rel="noreferrer">Filesystem discovery ↗</a>
               &nbsp;·&nbsp;
-              <a class="inline-link" href="https://github.com/Saksham-garg2008/DESK/blob/main/core/filesystem_search.py" target="_blank" rel="noreferrer">Filename search ↗</a>
+              <a class="inline-link"
+                 href="https://github.com/Saksham-garg2008/DESK/blob/main/core/filesystem_search.py"
+                 target="_blank"
+                 rel="noreferrer">Filename search ↗</a>
               &nbsp;·&nbsp;
-              <a class="inline-link" href="https://github.com/Saksham-garg2008/DESK/blob/main/core/agent_actions.py" target="_blank" rel="noreferrer">Agent actions ↗</a>
+              <a class="inline-link"
+                 href="https://github.com/Saksham-garg2008/DESK/blob/main/core/agent_actions.py"
+                 target="_blank"
+                 rel="noreferrer">Agent actions ↗</a>
             </p>
           </div>
+
           <span class="detail-symbol">▤</span>
         </article>
 
-        <article class="detail-row" id="modular">
+        <article class="detail-row" id="artifacts">
           <span class="detail-number">04</span>
+
+          <div>
+            <p class="eyebrow">ARTIFACTS &amp; USER DATA</p>
+            <h2>Keep useful outputs organised</h2>
+
+            <p>
+              DESK includes an artifact-handling layer for working with
+              generated outputs. Artifact management is separate from the
+              core inference and action responsibilities, making it easier
+              to organise the different parts of the application.
+            </p>
+
+            <p>
+              The exact formats and behaviours available depend on the
+              current release. Consult the source code and documentation
+              for implementation details.
+            </p>
+          </div>
+
+          <span class="detail-symbol">◇</span>
+        </article>
+
+        <article class="detail-row" id="modular">
+          <span class="detail-number">05</span>
+
           <div>
             <p class="eyebrow">ARCHITECTURE</p>
-            <h2>Separate responsibilities</h2>
-            <p>Core modules separate concerns such as inference, action execution, filesystem operations, memory, history, configuration, and artifact handling. This helps contributors understand and improve individual parts without turning the whole app into one large script.</p>
+            <h2>Built in separate layers</h2>
+
+            <p>
+              DESK separates responsibilities such as inference, action
+              execution, filesystem operations, memory, history,
+              configuration, and artifact handling into dedicated modules.
+            </p>
+
+            <p>
+              This modular structure helps contributors inspect individual
+              components and improve them without turning the entire
+              application into one large script.
+            </p>
+
+            <p>
+              DESK is built with Python and PySide6, with an emphasis on
+              a desktop application that can run without requiring a
+              heavyweight local language model.
+            </p>
           </div>
+
           <span class="detail-symbol">◇</span>
         </article>
 
         <article class="detail-row" id="companion">
-          <span class="detail-number">05</span>
+          <span class="detail-number">06</span>
+
           <div>
             <p class="eyebrow">PROJECT ECOSYSTEM</p>
-            <h2>Android Companion</h2>
-            <p>The wider project includes an Android Companion codebase. Some code is in the <a class="inline-link" href="https://github.com/Saksham-garg2008/DESK/tree/main/Companion" target="_blank" rel="noreferrer">Companion folder</a> in DESK, with a dedicated project at <a class="inline-link" href="https://github.com/Saksham-garg2008/DESK-Companion" target="_blank" rel="noreferrer">DESK-Companion</a>.</p>
+            <h2>DESK Android Companion</h2>
+
+            <p>
+              DESK's wider project includes an Android Companion codebase.
+              The desktop application provides a QR-code generator to
+              support the connection workflow.
+            </p>
+
+            <p>
+              Open the pairing interface in DESK using
+              <strong>Ctrl + Shift + P</strong>.
+              Follow the instructions shown in the application to continue
+              the connection process.
+            </p>
+
+            <p>
+              Explore the
+              <a class="inline-link"
+                 href="https://github.com/Saksham-garg2008/DESK/tree/main/Companion"
+                 target="_blank"
+                 rel="noreferrer">Companion folder in DESK ↗</a>
+              or the dedicated
+              <a class="inline-link"
+                 href="https://github.com/Saksham-garg2008/DESK-Companion"
+                 target="_blank"
+                 rel="noreferrer">DESK-Companion repository ↗</a>.
+            </p>
           </div>
+
           <span class="detail-symbol">◇</span>
         </article>
 
@@ -113,30 +289,87 @@
 
     <section class="section container">
       <div class="note-panel">
-        <p class="eyebrow">A NOTE ON SCOPE</p>
-        <h2>Open development means honest boundaries.</h2>
-        <p class="body-copy">DESK is actively developed. Capabilities may vary between releases; consult the repository and release notes for the most accurate implementation details. Features shown here should not be interpreted as guarantees of autonomous or unrestricted system access.</p>
-        <a class="text-link" href="https://github.com/Saksham-garg2008/DESK/releases" target="_blank" rel="noreferrer">Read release notes <span>↗</span></a>
+        <p class="eyebrow">ALPHA EDITION / V2.2.0</p>
+
+        <h2>Built in the open. Defined by what works.</h2>
+
+        <p class="body-copy">
+          DESK is actively developed, and capabilities can change between
+          releases. The features described here reflect the intended scope
+          of the current implementation, not a guarantee of unrestricted
+          or fully autonomous system access.
+        </p>
+
+        <p class="body-copy">
+          For the latest build, version-specific changes, and installation
+          details, consult the official release page.
+        </p>
+
+        <a class="text-link"
+           href="https://github.com/Saksham-garg2008/DESK/releases/tag/v2.2.0"
+           target="_blank"
+           rel="noreferrer">
+          Explore Alpha Edition release notes <span>↗</span>
+        </a>
       </div>
     </section>
+
+    <section class="section section-bordered">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <p class="eyebrow">NEXT STEP</p>
+            <h2>Explore DESK yourself.</h2>
+          </div>
+
+          <div>
+            <p class="body-copy">
+              Try the Alpha Edition, read the documentation, or inspect
+              the source code to understand how the different components
+              fit together.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="../downloads/">
+                Get DESK <span>↗</span>
+              </a>
+
+              <a class="button button-secondary" href="../documentation/">
+                Read documentation
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container footer-main">
-      <a class="brand" href="../"><span class="brand-mark">D</span><span>DESK</span></a>
+      <a class="brand" href="../">
+        <span class="brand-mark">D</span>
+        <span>DESK</span>
+      </a>
+
       <p>Open-source desktop AI, built in the open.</p>
+
       <div class="footer-links">
         <a href="../documentation/">Documentation</a>
         <a href="../contributing/">Contributing</a>
-        <a href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE" target="_blank" rel="noreferrer">GPL-2.0-only License</a>
+        <a href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE"
+           target="_blank"
+           rel="noreferrer">GPL-2.0-only License</a>
       </div>
     </div>
 
     <div class="container footer-bottom">
       <span>© <span data-year>2026</span> DESK contributors</span>
-      <a href="https://github.com/Saksham-garg2008/DESK" target="_blank" rel="noreferrer">View source ↗</a>
+
+      <a href="https://github.com/Saksham-garg2008/DESK"
+         target="_blank"
+         rel="noreferrer">View source ↗</a>
     </div>
   </footer>
 </body>
 </html>
-

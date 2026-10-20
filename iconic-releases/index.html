@@ -1,0 +1,398 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Explore the iconic editions of DESK, from Alpha to the next stage of its evolution.">
+
+  <title>Iconic Releases — DESK</title>
+
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+
+  <style>
+    /* Iconic Releases timeline */
+
+    .release-timeline {
+      position: relative;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 8px 0 20px;
+    }
+
+    .release-timeline::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      bottom: 78px;
+      left: 60px;
+      width: 2px;
+      background: #fff;
+      transform: translateX(-50%);
+    }
+
+    .release-entry {
+      position: relative;
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .release-entry + .release-entry {
+      margin-top: 76px;
+    }
+
+    .release-portrait {
+      position: relative;
+      z-index: 1;
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .release-portrait img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+    }
+
+    .release-portrait-placeholder {
+      border-color: #555;
+      background: #0b0b0b;
+      color: #999;
+    }
+
+    .release-portrait-placeholder span {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 1;
+    }
+
+    .release-content {
+      padding-top: 7px;
+    }
+
+    .release-label {
+      margin: 0 0 10px;
+      color: #999;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .release-content h2 {
+      margin: 0 0 10px;
+      font-size: clamp(26px, 4vw, 36px);
+      letter-spacing: -0.04em;
+    }
+
+    .release-meta {
+      margin: 0 0 18px;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .release-summary {
+      max-width: 480px;
+      margin: 0 0 22px;
+      color: #b7b7b7;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .release-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #666;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: border-color 180ms ease;
+    }
+
+    .release-link:hover {
+      border-color: #fff;
+    }
+
+    .release-link span {
+      transition: transform 180ms ease;
+    }
+
+    .release-link:hover span {
+      transform: translate(2px, -2px);
+    }
+
+    .release-status {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 6px 9px;
+      border: 1px solid #444;
+      border-radius: 3px;
+      color: #aaa;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .release-coming-soon .release-summary {
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .release-timeline {
+        padding-top: 4px;
+      }
+
+      .release-timeline::before {
+        top: 42px;
+        bottom: 55px;
+        left: 42px;
+      }
+
+      .release-entry {
+        grid-template-columns: 84px minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .release-entry + .release-entry {
+        margin-top: 62px;
+      }
+
+      .release-portrait {
+        width: 84px;
+        height: 84px;
+        border-width: 2px;
+      }
+
+      .release-content {
+        padding-top: 3px;
+      }
+
+      .release-content h2 {
+        font-size: 25px;
+      }
+
+      .release-summary {
+        font-size: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .release-link,
+      .release-link span {
+        transition: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../" aria-label="DESK home">
+        <span class="brand-mark">D</span>
+        <span>DESK</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="../">Home</a>
+        <a href="../features/">Features</a>
+        <a href="../downloads/">Downloads</a>
+        <a href="../documentation/">Documentation</a>
+        <a href="../contributing/">Contributing</a>
+        <a
+          class="nav-source"
+          href="https://github.com/Saksham-garg2008/DESK"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Source <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="page-hero container">
+      <p class="eyebrow">DESK / THE EVOLUTION</p>
+
+      <h1>
+        Iconic<br>
+        <span class="muted">Releases.</span>
+      </h1>
+
+      <p class="hero-copy">
+        Every edition marks a new stage in the evolution of DESK.
+        One release at a time.
+      </p>
+    </section>
+
+    <!-- RELEASE TIMELINE -->
+    <section class="section section-bordered">
+      <div class="container">
+
+        <div class="release-timeline" aria-label="DESK release timeline">
+
+          <!-- ALPHA EDITION -->
+          <article class="release-entry">
+            <div class="release-portrait">
+              <img
+                src="../assets/images/Alpha.png"
+                alt="Illustrated Yes Chad meme portrait representing the Alpha Edition"
+                width="120"
+                height="120"
+              >
+            </div>
+
+            <div class="release-content">
+              <p class="release-label">The beginning</p>
+
+              <h2>Alpha Edition</h2>
+
+              <p class="release-meta">
+                v2.2.0 <span aria-hidden="true">·</span> 20 October 2026
+              </p>
+
+              <p class="release-summary">
+                The foundation is here. The most complete and stable
+                version of DESK so far, establishing the foundation
+                for everything that follows.
+              </p>
+
+              <a
+                class="release-link"
+                href="https://github.com/Saksham-garg2008/DESK/releases/tag/v2.2.0"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View release <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- SIGMA EDITION -->
+          <article class="release-entry release-coming-soon">
+            <div
+              class="release-portrait release-portrait-placeholder"
+              aria-hidden="true"
+            >
+              <span>?</span>
+            </div>
+
+            <div class="release-content">
+              <p class="release-label">The next evolution</p>
+
+              <h2>Sigma Edition</h2>
+
+              <span class="release-status">Coming soon</span>
+
+              <p class="release-summary">
+                The next chapter of DESK is yet to come.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING SECTION -->
+    <section class="section container">
+      <div class="note-panel">
+        <p class="eyebrow">THE EVOLUTION CONTINUES</p>
+
+        <h2>Built in the open. Growing with every release.</h2>
+
+        <p class="body-copy">
+          Explore the current edition, follow development, and see
+          how DESK evolves over time.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="button button-primary"
+            href="https://github.com/Saksham-garg2008/DESK/releases"
+            target="_blank"
+            rel="noreferrer"
+          >
+            All releases <span>↗</span>
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/Saksham-garg2008/DESK"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Explore the source
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand" href="../">
+        <span class="brand-mark">D</span>
+        <span>DESK</span>
+      </a>
+
+      <p>Open-source desktop AI, built in the open.</p>
+
+      <div class="footer-links">
+        <a href="../documentation/">Documentation</a>
+        <a href="../contributing/">Contributing</a>
+        <a
+          href="https://github.com/Saksham-garg2008/DESK/blob/main/LICENSE"
+          target="_blank"
+          rel="noreferrer"
+        >GPL-2.0-only License</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> DESK contributors</span>
+
+      <a
+        href="https://github.com/Saksham-garg2008/DESK"
+        target="_blank"
+        rel="noreferrer"
+      >View source ↗</a>
+    </div>
+  </footer>
+</body>
+</html>
